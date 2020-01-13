@@ -54,3 +54,18 @@ def sendEmail(SUBJECT, BODY_TEXT, BODY_HTML):
         print ("Error: ", e)
     else:
         print ("Email sent!")
+
+if __name__=="__main__":
+    sendEmail('test2', "Amazon SES Test\r\n"
+             "This email was sent through the Amazon SES SMTP "
+             "Interface using the Python smtplib package.", """<html>
+<head></head>
+<body>
+  <h1>Amazon SES SMTP Email Test</h1>
+  <p>This email was sent with Amazon SES using the
+    <a href='https://www.python.org/'>Python</a>
+    <a href='https://docs.python.org/3/library/smtplib.html'>
+    smtplib</a> library.</p>
+</body>
+</html>
+            """)
